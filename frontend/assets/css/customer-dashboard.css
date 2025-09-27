@@ -1,0 +1,253 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 60%;
+  max-width: 600px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-bar button {
+  background: #ff385c;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.search-bar button:hover {
+  background: #d94a4f;
+}
+
+/* Artisan Icons */
+.artisan-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+.artisan-icons .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.artisan-icons .icon i {
+  font-size: 30px;
+  color: #555;
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.artisan-icons .icon span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.artisan-icons .icon:hover {
+  transform: scale(1.1);
+}
+
+/* Artisan Listings */
+#artisans-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Artisan Card */
+.artisan-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+}
+
+.artisan-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Booking Button */
+.book-btn {
+  background: #ff385c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.book-btn:hover {
+  background: #d94a4f;
+}
+
+/* Booking Modal - Hidden by Default */
+#booking-modal {
+  display: none;  /* Ensure modal is hidden initially */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  max-width: 90%;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide modal when not active */
+.modal.hidden {
+  display: none;
+}
+
+/* Form Styling */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea,
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Description Textarea */
+.modal-content textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* Submit Button */
+.modal-content button {
+  background: #ff5a5f;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: #d94a4f;
+}
+.book-btn {
+background: #ff385c;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 10px;
+}
+
+#logout-btn {
+  background: #ff385c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#logout-btn:hover {
+  background: #d94a4f;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .search-bar {
+      width: 80%;
+  }
+  .artisan-icons {
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find an Artisan</title>
+    <link rel="stylesheet" href="../assets/css/customer-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <button id="logout-btn" class="btn-logout">Logout</button>
+        <h1>Find an Artisan</h1>
+        <div class="search-container">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-bar" placeholder="Search for artisans...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Artisan Icons -->
+            <div class="artisan-icons">
+                <div class="icon" onclick="filterArtisans('carpenter')">
+                    <i class="fas fa-hammer"></i>
+                    <span>Carpentry</span>
+                </div>
+                <div class="icon" onclick="filterArtisans('electrician')">
+                    <i class="fas fa-bolt"></i>
+                    <span>Electrician</span>
+                </div>
+                <div class="icon" onclick="filterArtisans('plumber')">
+                    <i class="fas fa-wrench"></i>
+                    <span>Plumber</span>
+                </div>
+                <div class="icon" onclick="filterArtisans('painter')">
+                    <i class="fas fa-paint-roller"></i>
+                    <span>Painter</span>
+                </div>
+                <div class="icon" onclick="filterArtisans('mechanic')">
+                    <i class="fas fa-car"></i>
+                    <span>Mechanic</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Artisan Listings -->
+    <section id="artisans-list">
+        <!-- Artisans will be dynamically inserted here -->
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Book an Artisan</h2>
+            <form id="booking-form">
+                <input type="hidden" id="artisanId">
+                
+                <label for="clientName">Your Name</label>
+                <input type="text" id="clientName" required>
+
+                <label for="Title">Title</label>
+                <input type="text" id="title" required>
+                
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+                
+                <label for="time">Time</label>
+                <input type="time" id="time" required>
+                
+                <label for="location">Location</label>
+                <input type="text" id="location" required>
+
+                <label for="description">Job Description</label>
+                <textarea id="description" rows="3" required></textarea>
+
+                <label for="budget">Budget</label>
+                <input type="number" id="budget" required>
+                
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/JS/user-dashboard.js"></script>
+</body>
+</html>

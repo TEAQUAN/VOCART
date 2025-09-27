@@ -1,0 +1,203 @@
+/* General Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+#logout-btn {
+  background: #ff385c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+#logout-btn:hover {
+  background: #d94a4f;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  margin-top: 80px; /* Prevents header overlap */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 80px;
+}
+
+.profile-section {
+  padding: 20px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #ff385c;
+}
+
+#artisan-name-display {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.artisan-location,
+.artisan-skills {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  margin-left: 300px; /* Adjust based on sidebar width */
+}
+
+.main-content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* Job Requests List - Airbnb Style */
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid #ddd;
+  }
+  
+  .job-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .job-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .job-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .job-card .job-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .job-card .job-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .job-card .job-meta i {
+    color: #ff385c;
+  }
+  
+  .job-card .job-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .job-card button {
+    background: #ff385c;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .job-card button:hover {
+    background: #d94a4f;
+  }
+  
+  .job-card .decline-btn {
+    background: #ddd;
+    color: #333;
+  }
+  
+  .job-card .decline-btn:hover {
+    background: #bbb;
+  }
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}

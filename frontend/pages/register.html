@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../assets/css/register.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <div id="role-selection" class="role-selection">
+            <button class="role-btn" onclick="selectRole('artisan')">Artisan</button>
+            <button class="role-btn" onclick="selectRole('customer')">Customer</button>
+        </div>
+        <form id="register-form" style="display: none;" enctype="multipart/form-data">
+            <input type="hidden" id="role" name="role">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="location" placeholder="Location" required>
+            <textarea name="bio" placeholder="Tell us about yourself" class="artisan-only"></textarea>
+            <input type="text" name="skills" placeholder="Skills (comma separated)" class="artisan-only">
+            
+            <!-- Fixed File Input -->
+            <label class="file-upload">
+                <input type="file" name="profileImage" accept="image/*">
+            </label>
+
+            <button type="submit">Register</button>
+            <button type="button" class="small-back-btn" onclick="goBack()">&#8592;</button>
+        </form>
+        
+        <p class="link">Already have an account? <a href="../pages/login.html">Log in</a></p>
+    </div>
+    <script src="../assets/js/register.js"></script>
+</body>
+</html>
