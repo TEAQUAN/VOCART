@@ -12,7 +12,7 @@ exports.createService = async (req, res) => {
         price,
         location,
         availableDates,
-        createdBy: req.user.userId,  // Use userId instead of _id
+        createdBy: req.user.userId, 
       });
       
 
